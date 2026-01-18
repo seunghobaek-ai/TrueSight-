@@ -137,7 +137,7 @@ def multimodal_decision(audio_path, image_path):
 
     return final
 
-
+```
 
 ## 🧩 사용 기술
 
