@@ -110,6 +110,26 @@ TrueSight/
 각 모델의 성능을 위 지표로 정량적으로 평가하였습니다.
 
 ---
+📌 Core Logic : Multimodal Decision (Adaptive Weighted Voting)
+def multimodal_decision(audio_path, image_path):
+    audio_fake = predict_audio(audio_path)
+    image_fake = predict_image(image_path)
+```# 더 높은 조작 확률을 보인 모달리티에 가중치 부여```
+   if image_fake > audio_fake:
+        final_score = 0.6 * image_fake + 0.4 * audio_fake
+    else:
+        final_score = 0.4 * image_fake + 0.6 * audio_fake
+
+  if final_score >= 0.7:
+        final = "FAKE"
+    elif final_score <= 0.4:
+        final = "REAL"
+    else:
+        final = "UNSURE"
+
+   return final
+
+
 
 ## 🧩 사용 기술
 
