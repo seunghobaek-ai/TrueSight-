@@ -112,9 +112,11 @@ TrueSight/
 ---
 ## 🧠 Core Logic: Multimodal Decision (Adaptive Weighted Voting)
 
-이미지 모델과 음성 모델의 예측 결과를 **단순 평균이 아닌**,  
-조작 가능성이 더 높은 모달리티에 **가중치(0.6)** 를 부여하는 방식으로 통합하여 최종 딥페이크 여부를 판단합니다.
+이미지 모델과 음성 모델의 예측 결과를 단순 평균이 아닌,  
+조작 가능성이 더 높은 모달리티에 가중치(0.6)를 부여하여  
+최종 딥페이크 여부를 판단하는 핵심 로직입니다.
 
+```python
 def multimodal_decision(audio_path, image_path):
     audio_fake = predict_audio(audio_path)
     image_fake = predict_image(image_path)
