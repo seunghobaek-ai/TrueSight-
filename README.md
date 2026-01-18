@@ -158,4 +158,3 @@ def multimodal_decision(audio_path, image_path):
 
 ---
 
-> 본 프로젝트는 한성대학교 AI응용학과의 **캡스톤디자인 과제**로 수행되었습니다.
